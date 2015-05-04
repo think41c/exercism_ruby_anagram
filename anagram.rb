@@ -1,8 +1,9 @@
 class Anagram
   def initialize(anagram)
-    # Take in the word as a string.
-    # Find the length of the string
-    # Extract the letters into an array
+    @anagram_length = anagram.length
+    @anagram_lets   = anagram.split("")
+    p @anagram_lets
+    p @anagram_length
   end
 
   def match(matches)
@@ -22,3 +23,6 @@ class Anagram
   end
 
 end
+
+a = Anagram.new('diaper')
+p a.match(a)
