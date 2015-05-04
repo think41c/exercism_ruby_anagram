@@ -7,7 +7,7 @@ class Anagram
   end
 
   def match(matches)
-    # match = []
+    match = []
     # Loop through each word in the matches array
     #   Find the length of the word in the array
     #   Loop as many times are there are letters in the word
@@ -18,8 +18,7 @@ class Anagram
     #         Go to the next word
     #       End
 
-    a = []
-    a
+    match
   end
 
 end
