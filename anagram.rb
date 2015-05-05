@@ -8,6 +8,11 @@ class Anagram
 
   def match(matches)
     match = []
+    counter = 0
+    until counter == matches.length
+      p matches[counter]
+      counter += 1
+    end
     # Loop through each word in the matches array
     #   Find the length of the word in the array
     #   Loop as many times are there are letters in the word
@@ -17,11 +22,10 @@ class Anagram
     #       Else 
     #         Go to the next word
     #       End
-
     match
   end
 
 end
 
 a = Anagram.new('diaper')
-p a.match(a)
+p a.match(["a", "b"])
