@@ -10,10 +10,11 @@ class Anagram
     match = []
     counter = 0
     until counter == matches.length
-      p matches[counter]
+      word_to_examine = matches[counter]
+      p word_to_examine
+      p word_to_examine.length
       counter += 1
     end
-    # Loop through each word in the matches array
     #   Find the length of the word in the array
     #   Loop as many times are there are letters in the word
     #     Check and see if the first letter of anagram is same as match word
@@ -28,4 +29,4 @@ class Anagram
 end
 
 a = Anagram.new('diaper')
-p a.match(["a", "b"])
+p a.match(["apple", "bee"])
