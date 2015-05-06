@@ -17,7 +17,6 @@ class Anagram
     end
     match
   end
-
 end
 
 a = Anagram.new('diaper')
