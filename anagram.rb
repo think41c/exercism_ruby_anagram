@@ -35,4 +35,4 @@ class Anagram
 end
 
 a = Anagram.new('diaper')
-p a.match(['aidrep', "diaper"])
+p a.match(['aidrep', "diaper", "not at all"])
