@@ -13,7 +13,10 @@ class Anagram
       matchz << matches[counter] if word_to_examine == @anagram_lets
       counter += 1
     end
+    remove(matchz)
+  end
 
+  def remove(matchz)
     x = 0 
     until x >= matchz.length 
         if matchz[x].downcase == @anagram.downcase
