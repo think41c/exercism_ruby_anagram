@@ -21,7 +21,6 @@ class Anagram
     until x >= matchz.length 
         if matchz[x].downcase == @anagram.downcase
           matchz.delete_at(x)
-          x = 0
         else
           x += 1 
         end
