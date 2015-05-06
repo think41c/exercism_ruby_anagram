@@ -44,5 +44,4 @@ class Anagram
 end
 detector = Anagram.new('corn')
 anagrams = detector.match %w(corn dark Corn rank CORN cron park)
-# anagrams = detector.match %w(CORN)
 p anagrams
