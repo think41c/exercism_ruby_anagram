@@ -6,33 +6,43 @@ class Anagram
   end
 
   def match(matches)
-    match = []
+    matchz = []
     counter = 0
     until counter == matches.length
       word_to_examine = matches[counter].downcase.split("").sort
-      match << matches[counter] if word_to_examine == @anagram_lets
+      matchz << matches[counter] if word_to_examine == @anagram_lets
       counter += 1
     end
 
     x = 0 
-    until x == match.length 
-      if match[x].downcase == @anagram.downcase
-        p match 
-        puts "they're the same!"
-        match.delete_at(x)
-        p "just deleted it"
-        p match
-      else
-        p match
-        puts "Not the same!"
-      end
-    x += 1 
-    end
+    puts "We're starting with the 'matchz' array - #{matchz}"
+    puts "matchz length -> #{matchz.length} , anagram downcase -> #{@anagram.downcase}, x ->#{x}"
+    
+    until x >= matchz.length 
+     
 
-    match.delete(@anagram.downcase)
-    match
+        if matchz[x].downcase == @anagram.downcase
+          puts "\"#{matchz[x]}\" <- Matchz[x] and \"#{@anagram.downcase}\" - they're the same!"
+          p "just deleted - #{matchz[x]}"
+          matchz.delete_at(x)
+          p matchz
+          p "*********"
+          x = 0
+          puts "The matchz lenght #{matchz.length}"
+        else
+          puts "Not the same!"
+          p matchz
+          x += 1 
+        end
+        puts "Still in until loop."
+      
+      end
+
+    matchz.delete(@anagram.downcase)
+    matchz
   end
 end
-
-detector = Anagram.new('allergy')
-anagrams = detector.match %w( allergy gallery ballerina regally clergy largely leading)
+detector = Anagram.new('corn')
+anagrams = detector.match %w(corn dark Corn rank CORN cron park)
+# anagrams = detector.match %w(CORN)
+p anagrams
