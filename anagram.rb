@@ -13,7 +13,12 @@ class Anagram
     until counter == matches.length
       word_to_examine = matches[counter].split("").sort
       p word_to_examine
-      match_to = word_to_examine.length
+      if word_to_examine == @anagram_lets
+        puts "They're the same!"
+      else
+        puts "They're not the same!"
+      end
+
       counter += 1
     end
     #   Loop as many times are there are letters in the word
@@ -29,4 +34,4 @@ class Anagram
 end
 
 a = Anagram.new('diaper')
-p a.match(["apple", "bee"])
+p a.match(['diaper'])
