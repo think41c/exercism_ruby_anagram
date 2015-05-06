@@ -34,4 +34,4 @@ class Anagram
 end
 
 a = Anagram.new('diaper')
-p a.match(['diaper'])
+p a.match(['aidrep'])
