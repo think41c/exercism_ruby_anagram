@@ -17,6 +17,3 @@ class Anagram
     match
   end
 end
-
-# a = Anagram.new('diaper')
-# p a.match(['aidrep', "diaper", "not at all"])
