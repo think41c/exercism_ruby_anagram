@@ -5,27 +5,27 @@ class Anagram
     @anagram_lets   = anagram.downcase.split("").sort
   end
 
-  def match(matches)
-    matchz = []
+  def match(compared_word)
+    matches = []
     counter = 0
-    until counter == matches.length
-      word_to_examine = matches[counter].downcase.split("").sort
-      matchz << matches[counter] if word_to_examine == @anagram_lets
+    until counter == compared_word.length
+      word_to_examine = compared_word[counter].downcase.split("").sort
+      matches << compared_word[counter] if word_to_examine == @anagram_lets
       counter += 1
     end
-    remove(matchz)
+    remove_duplicates(matches)
   end
 
-  def remove(matchz)
+  def remove_duplicates(matches)
     x = 0 
-    until x >= matchz.length 
-        if matchz[x].downcase == @anagram.downcase
-          matchz.delete_at(x)
+    until x >= matches.length 
+        if matches[x].downcase == @anagram.downcase
+          matches.delete_at(x)
         else
           x += 1 
         end
       end
-    matchz.delete(@anagram.downcase)
-    matchz
+    matches.delete(@anagram.downcase)
+    matches
   end
 end
