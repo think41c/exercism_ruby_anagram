@@ -15,6 +15,7 @@ class Anagram
       p word_to_examine
       if word_to_examine == @anagram_lets
         puts "They're the same!"
+        match << matches[counter]
       else
         puts "They're not the same!"
       end
@@ -34,4 +35,4 @@ class Anagram
 end
 
 a = Anagram.new('diaper')
-p a.match(['aidrep'])
+p a.match(['aidrep', "diaper"])
